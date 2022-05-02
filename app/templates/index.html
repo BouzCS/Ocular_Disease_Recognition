@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Ocular Disease Recognition</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href={{url_for('static' , filename = 'css/styles.css')}} rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Ocular Disease Recognition</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#upload">Upload</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center" id="upload">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center upload-file">
+                        <h1 class="mx-auto my-0 text-uppercase">Ocular Disease Recognition</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Upload your file.</h2>
+                        <form class="btn btn-success btn-lg file-form" action="/success" method="post", enctype="multipart/form-data">
+                            <input class="btn btn-success btn-lg file-form-input" type="file" , name = "file"/>
+                            <button class="btn btn-success btn-lg file-form">Upload</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img style="height:612;width:507;" class="img-fluid mb-3 mb-lg-0" src="{{url_for('static', filename='assets/img/new-schema-anatomie-oeil.jpg')}}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Maladies de l’œil:</h4>
+                            <p class="text-black-50 mb-0">Il existe de nombreuses maladies de l’œil. Chaque partie anatomique de cet organe peut présenter un désordre et causer un trouble oculaire. Il est important pour le patient de bien comprendre la nature de son trouble oculaire afin de prendre bien soin de sa condition visuelle. Cela permet aussi de mieux prendre en charge une maladie et de dépister les signes indiquant une détérioration. Un patient informé et averti a plus de chances d’être traité à temps, de se sentir en confiance et d’observer son traitement..</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img style="height:612;width:507;" class="img-fluid" src="{{url_for('static', filename='assets/img/retino-diabetique-proliferante.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white"></h4>
+                                    <p class="mb-0 text-white-50">Dans notre ensemble de données, des annotations ont été ajoutées par des lecteurs humains formés à la gestion du contrôle de la qualité. Ils classent les patients en huit catégories, dont:
+
+    Normal (N)
+    Diabetes (D)
+    Glaucoma (G)
+    Cataract (C)
+    AMD (A)
+    Hypertension (H)
+    Myopia (M)
+    Other diseases/abnormalities (O)
+</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{url_for('static', filename='assets/img/les-maladies-oculaires-glaucome.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Glaucoma</h4>
+                                    <p class="mb-0 text-white-50">Le glaucome est une maladie de l’œil qui touche de manière irréversible et permanente le nerf optique (atteinte structurelle). Le nerf optique est la partie de l’œil par où transite toute l’information visuelle captée par l’œil. Cette information voyage par le nerf optique et est transmise au cerveau.
+
+Le glaucome est une maladie très fréquente qui touche des gens de tous âges. Selon les sources, on estime qu’il y aurait jusqu’à 10 % de la population qui en serait atteinte. Au Canada, ce nombre représente 250 000 personnes. À l’échelle mondiale, ceci représente 65 millions d’individus.
+
+Le glaucome peut se présenter sous diverses formes. On en dénombre pas moins d’une soixantaine. Nous présentons ci-dessous certaines formes les plus courantes</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">Rabat, Morocco</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Team</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">BOUZMOUL Mohamed Amine <br>ECH-CHOUKY Noureddine</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-github-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Github</h4>
+                                <hr class="my-4 mx-auto" />
+                                <a class="mx-2" href="https://www.github.com/BouzCS"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="https://www.github.com/BouzCS"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; 2022</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
